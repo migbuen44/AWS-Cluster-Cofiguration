@@ -46,7 +46,7 @@ spec:
             - filters:
                 - name: tag:Name
                   values:
-                    - <infrastructure_id>-worker-sg 
+                    - multicloud-aws-rxhv5-worker-sg 
           subnet:
             filters:
               - name: tag:Name
