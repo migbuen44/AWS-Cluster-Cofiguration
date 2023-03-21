@@ -1,5 +1,10 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
+ignoreDifferences:
+  - group: apps
+    kind: Deployment
+    jsonPointers:
+    - /spec/replicas
 metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: >
