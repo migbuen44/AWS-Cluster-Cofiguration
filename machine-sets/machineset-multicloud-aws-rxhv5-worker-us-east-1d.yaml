@@ -169,4 +169,4 @@ spec:
             id: multicloud-aws-rxhv5-worker-profile
 status:
   observedGeneration: 6
-  replicas: 0
+  replicas: 1
