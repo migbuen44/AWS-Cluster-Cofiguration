@@ -106,11 +106,6 @@ metadata:
   labels:
     machine.openshift.io/cluster-api-cluster: multicloud-aws-rxhv5
 spec:
-  ignoreDifferences:
-  - group: apps
-    kind: Deployment
-    jsonPointers:
-    - /spec/replicas
   replicas: 0
   selector:
     matchLabels:
