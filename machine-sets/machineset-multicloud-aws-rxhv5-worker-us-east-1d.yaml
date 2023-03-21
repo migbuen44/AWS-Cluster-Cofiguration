@@ -1,12 +1,12 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
-# ignoreDifferences: 
-# - group: apps
-#     kind: Deployment
-#     name: guestbook
-#     namespace: default
-#     jsonPointers:
-#     - /spec/replicas
+ignoreDifferences: 
+- group: apps
+    kind: Deployment
+    name: guestbook
+    namespace: default
+    jsonPointers:
+    - /spec/replicas
 metadata:
   annotations:
     machine.openshift.io/GPU: '0'
