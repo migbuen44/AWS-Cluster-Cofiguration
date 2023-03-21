@@ -1,9 +1,9 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 ignoreDifferences: 
-- group: apps
-    jsonPointers:
-    - /spec/replicas
+# - group: apps
+#     jsonPointers:
+#     - /spec/replicas
 metadata:
   annotations:
     machine.openshift.io/GPU: '0'
