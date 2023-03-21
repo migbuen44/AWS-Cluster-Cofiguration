@@ -161,5 +161,4 @@ spec:
           iamInstanceProfile:
             id: multicloud-aws-rxhv5-worker-profile
 status:
-  observedGeneration: 5
   replicas: 0
