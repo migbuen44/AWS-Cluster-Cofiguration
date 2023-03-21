@@ -6,7 +6,7 @@ metadata:
   name: multicloud-aws-rxhv5-worker-us-east-1d 
   namespace: openshift-machine-api
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       machine.openshift.io/cluster-api-cluster: multicloud-aws-rxhv5 
