@@ -112,7 +112,7 @@ metadata:
   labels:
     machine.openshift.io/cluster-api-cluster: multicloud-aws-rxhv5
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       machine.openshift.io/cluster-api-cluster: multicloud-aws-rxhv5
@@ -170,4 +170,4 @@ spec:
             id: multicloud-aws-rxhv5-worker-profile
 status:
   observedGeneration: 6
-  replicas: 1
+  replicas: 0
