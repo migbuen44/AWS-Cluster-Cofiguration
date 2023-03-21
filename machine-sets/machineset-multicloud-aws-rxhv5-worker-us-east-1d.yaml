@@ -37,7 +37,7 @@ spec:
           deviceIndex: 0
           iamInstanceProfile:
             id: multicloud-aws-rxhv5-worker-profile 
-          instanceType: m6i.large
+          instanceType: m6i.xlarge
           kind: AWSMachineProviderConfig
           placement:
             availabilityZone: us-east-1d 
