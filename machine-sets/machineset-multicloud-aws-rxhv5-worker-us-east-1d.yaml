@@ -1,186 +1,62 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: >
-      {"apiVersion":"machine.openshift.io/v1beta1","kind":"MachineSet","metadata":{"annotations":{"machine.openshift.io/GPU":"0","machine.openshift.io/memoryMb":"16384","machine.openshift.io/vCPU":"4"},"creationTimestamp":"2023-01-24T18:29:51Z","generation":7,"labels":{"app.kubernetes.io/instance":"cluster-config","machine.openshift.io/cluster-api-cluster":"multicloud-aws-rxhv5"},"managedFields":[{"apiVersion":"machine.openshift.io/v1beta1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:labels":{".":{},"f:machine.openshift.io/cluster-api-cluster":{}}},"f:spec":{".":{},"f:selector":{},"f:template":{".":{},"f:metadata":{".":{},"f:labels":{".":{},"f:machine.openshift.io/cluster-api-cluster":{},"f:machine.openshift.io/cluster-api-machine-role":{},"f:machine.openshift.io/cluster-api-machine-type":{},"f:machine.openshift.io/cluster-api-machineset":{}}},"f:spec":{".":{},"f:lifecycleHooks":{},"f:metadata":{},"f:providerSpec":{".":{},"f:value":{".":{},"f:ami":{".":{},"f:id":{}},"f:apiVersion":{},"f:blockDevices":{},"f:credentialsSecret":{".":{},"f:name":{}},"f:deviceIndex":{},"f:iamInstanceProfile":{".":{},"f:id":{}},"f:instanceType":{},"f:kind":{},"f:metadata":{},"f:metadataServiceOptions":{},"f:placement":{".":{},"f:availabilityZone":{},"f:region":{}},"f:securityGroups":{},"f:subnet":{".":{},"f:filters":{}},"f:tags":{},"f:userDataSecret":{".":{},"f:name":{}}}}}}}},"manager":"cluster-bootstrap","operation":"Update","time":"2023-01-24T18:29:51Z"},{"apiVersion":"machine.openshift.io/v1beta1","fieldsType":"FieldsV1","fieldsV1":{"f:status":{}},"manager":"cluster-bootstrap","operation":"Update","subresource":"status","time":"2023-01-24T18:29:51Z"},{"apiVersion":"machine.openshift.io/v1beta1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{".":{},"f:machine.openshift.io/GPU":{},"f:machine.openshift.io/memoryMb":{},"f:machine.openshift.io/vCPU":{}}}},"manager":"machine-controller-manager","operation":"Update","time":"2023-01-24T18:31:42Z"},{"apiVersion":"machine.openshift.io/v1beta1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{"f:kubectl.kubernetes.io/last-applied-configuration":{}},"f:labels":{"f:app.kubernetes.io/instance":{}}}},"manager":"argocd-controller","operation":"Update","time":"2023-03-21T00:07:16Z"},{"apiVersion":"machine.openshift.io/v1beta1","fieldsType":"FieldsV1","fieldsV1":{"f:spec":{"f:replicas":{}}},"manager":"Mozilla","operation":"Update","time":"2023-03-21T16:56:55Z"},{"apiVersion":"machine.openshift.io/v1beta1","fieldsType":"FieldsV1","fieldsV1":{"f:status":{"f:fullyLabeledReplicas":{},"f:observedGeneration":{},"f:replicas":{}}},"manager":"machineset-controller","operation":"Update","subresource":"status","time":"2023-03-21T16:56:55Z"}],"name":"multicloud-aws-rxhv5-worker-us-east-1d","namespace":"openshift-machine-api","resourceVersion":"29498181","uid":"37249146-7e5e-4368-b9ff-8b49038fa1af"},"spec":{"replicas":2,"selector":{"matchLabels":{"machine.openshift.io/cluster-api-cluster":"multicloud-aws-rxhv5","machine.openshift.io/cluster-api-machineset":"multicloud-aws-rxhv5-worker-us-east-1d"}},"template":{"metadata":{"labels":{"machine.openshift.io/cluster-api-cluster":"multicloud-aws-rxhv5","machine.openshift.io/cluster-api-machine-role":"worker","machine.openshift.io/cluster-api-machine-type":"worker","machine.openshift.io/cluster-api-machineset":"multicloud-aws-rxhv5-worker-us-east-1d"}},"spec":{"lifecycleHooks":{},"metadata":{},"providerSpec":{"value":{"ami":{"id":"ami-0fe05b1aa8dacfa90"},"apiVersion":"machine.openshift.io/v1beta1","blockDevices":[{"ebs":{"encrypted":true,"iops":0,"kmsKey":{"arn":""},"volumeSize":120,"volumeType":"gp3"}}],"credentialsSecret":{"name":"aws-cloud-credentials"},"deviceIndex":0,"iamInstanceProfile":{"id":"multicloud-aws-rxhv5-worker-profile"},"instanceType":"m6i.xlarge","kind":"AWSMachineProviderConfig","metadata":{},"metadataServiceOptions":{},"placement":{"availabilityZone":"us-east-1d","region":"us-east-1"},"securityGroups":[{"filters":[{"name":"tag:Name","values":["multicloud-aws-rxhv5-worker-sg"]}]}],"subnet":{"filters":[{"name":"tag:Name","values":["multicloud-aws-rxhv5-private-us-east-1d"]}]},"tags":[{"name":"kubernetes.io/cluster/multicloud-aws-rxhv5","value":"owned"}],"userDataSecret":{"name":"worker-user-data"}}}}}},"status":{"fullyLabeledReplicas":1,"observedGeneration":7,"replicas":1}}
-    machine.openshift.io/GPU: '0'
-    machine.openshift.io/memoryMb: '16384'
-    machine.openshift.io/vCPU: '4'
-  resourceVersion: '29506100'
-  name: multicloud-aws-rxhv5-worker-us-east-1d
-  uid: 37249146-7e5e-4368-b9ff-8b49038fa1af
-  creationTimestamp: '2023-01-24T18:29:51Z'
-  generation: 8
-  managedFields:
-    - apiVersion: machine.openshift.io/v1beta1
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:metadata':
-          'f:labels':
-            .: {}
-            'f:machine.openshift.io/cluster-api-cluster': {}
-        'f:spec':
-          .: {}
-          'f:selector': {}
-          'f:template':
-            .: {}
-            'f:metadata':
-              .: {}
-              'f:labels':
-                .: {}
-                'f:machine.openshift.io/cluster-api-cluster': {}
-                'f:machine.openshift.io/cluster-api-machine-role': {}
-                'f:machine.openshift.io/cluster-api-machine-type': {}
-                'f:machine.openshift.io/cluster-api-machineset': {}
-            'f:spec':
-              .: {}
-              'f:lifecycleHooks': {}
-              'f:metadata': {}
-              'f:providerSpec':
-                .: {}
-                'f:value':
-                  'f:instanceType': {}
-                  'f:metadata': {}
-                  'f:blockDevices': {}
-                  'f:kind': {}
-                  'f:securityGroups': {}
-                  'f:deviceIndex': {}
-                  'f:ami':
-                    .: {}
-                    'f:id': {}
-                  'f:metadataServiceOptions': {}
-                  'f:tags': {}
-                  .: {}
-                  'f:placement':
-                    .: {}
-                    'f:availabilityZone': {}
-                    'f:region': {}
-                  'f:subnet':
-                    .: {}
-                    'f:filters': {}
-                  'f:apiVersion': {}
-                  'f:iamInstanceProfile':
-                    .: {}
-                    'f:id': {}
-                  'f:credentialsSecret':
-                    .: {}
-                    'f:name': {}
-                  'f:userDataSecret':
-                    .: {}
-                    'f:name': {}
-      manager: cluster-bootstrap
-      operation: Update
-      time: '2023-01-24T18:29:51Z'
-    - apiVersion: machine.openshift.io/v1beta1
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:status': {}
-      manager: cluster-bootstrap
-      operation: Update
-      subresource: status
-      time: '2023-01-24T18:29:51Z'
-    - apiVersion: machine.openshift.io/v1beta1
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:metadata':
-          'f:annotations':
-            .: {}
-            'f:machine.openshift.io/GPU': {}
-            'f:machine.openshift.io/memoryMb': {}
-            'f:machine.openshift.io/vCPU': {}
-      manager: machine-controller-manager
-      operation: Update
-      time: '2023-01-24T18:31:42Z'
-    - apiVersion: machine.openshift.io/v1beta1
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:metadata':
-          'f:annotations':
-            'f:kubectl.kubernetes.io/last-applied-configuration': {}
-          'f:labels':
-            'f:app.kubernetes.io/instance': {}
-        'f:spec':
-          'f:replicas': {}
-      manager: argocd-controller
-      operation: Update
-      time: '2023-03-21T16:58:01Z'
-    - apiVersion: machine.openshift.io/v1beta1
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:status':
-          'f:availableReplicas': {}
-          'f:fullyLabeledReplicas': {}
-          'f:observedGeneration': {}
-          'f:readyReplicas': {}
-          'f:replicas': {}
-      manager: machineset-controller
-      operation: Update
-      subresource: status
-      time: '2023-03-21T17:01:11Z'
-  namespace: openshift-machine-api
   labels:
-    app.kubernetes.io/instance: cluster-config
-    machine.openshift.io/cluster-api-cluster: multicloud-aws-rxhv5
+    machine.openshift.io/cluster-api-cluster: multicloud-aws-rxhv5 
+  name: multicloud-aws-rxhv5-worker-us-east-1d 
+  namespace: openshift-machine-api
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-cluster: multicloud-aws-rxhv5
-      machine.openshift.io/cluster-api-machineset: multicloud-aws-rxhv5-worker-us-east-1d
+      machine.openshift.io/cluster-api-cluster: multicloud-aws-rxhv5 
+      machine.openshift.io/cluster-api-machineset: multicloud-aws-rxhv5-worker-us-east-1d  
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: multicloud-aws-rxhv5
-        machine.openshift.io/cluster-api-machine-role: worker
-        machine.openshift.io/cluster-api-machine-type: worker
+        machine.openshift.io/cluster-api-cluster: multicloud-aws-rxhv5 
+        machine.openshift.io/cluster-api-machine-role: worker 
+        machine.openshift.io/cluster-api-machine-type: worker 
         machine.openshift.io/cluster-api-machineset: multicloud-aws-rxhv5-worker-us-east-1d
     spec:
-      lifecycleHooks: {}
-      metadata: {}
+      metadata:
+        labels:
+          node-role.kubernetes.io/worker: "" 
       providerSpec:
         value:
-          userDataSecret:
-            name: worker-user-data
-          placement:
-            availabilityZone: us-east-1d
-            region: us-east-1
-          credentialsSecret:
-            name: aws-cloud-credentials
-          instanceType: m6i.xlarge
-          metadata: {}
+          ami:
+            id: ami-046fe691f52a953f9 
+          apiVersion: awsproviderconfig.openshift.io/v1beta1
           blockDevices:
             - ebs:
-                encrypted: true
                 iops: 0
-                kmsKey:
-                  arn: ''
                 volumeSize: 120
-                volumeType: gp3
+                volumeType: gp2
+          credentialsSecret:
+            name: aws-cloud-credentials
+          deviceIndex: 0
+          iamInstanceProfile:
+            id: multicloud-aws-rxhv5-worker-profile 
+          instanceType: m6i.large
+          kind: AWSMachineProviderConfig
+          placement:
+            availabilityZone: us-east-1d 
+            region: us-east-1
           securityGroups:
             - filters:
-                - name: 'tag:Name'
+                - name: tag:Name
                   values:
-                    - multicloud-aws-rxhv5-worker-sg
-          kind: AWSMachineProviderConfig
-          metadataServiceOptions: {}
-          tags:
-            - name: kubernetes.io/cluster/multicloud-aws-rxhv5
-              value: owned
-          deviceIndex: 0
-          ami:
-            id: ami-0fe05b1aa8dacfa90
+                    - <infrastructure_id>-worker-sg 
           subnet:
             filters:
-              - name: 'tag:Name'
+              - name: tag:Name
                 values:
                   - multicloud-aws-rxhv5-private-us-east-1d
-          apiVersion: machine.openshift.io/v1beta1
-          iamInstanceProfile:
-            id: multicloud-aws-rxhv5-worker-profile
-status:
-  availableReplicas: 2
-  fullyLabeledReplicas: 2
-  observedGeneration: 8
-  readyReplicas: 2
-  replicas: 2
+          tags:
+            - name: kubernetes.io/cluster/multicloud-aws-rxhv5 
+              value: owned 
+          userDataSecret:
+            name: worker-user-data
+      taints: 
+        - key: node-role.kubernetes.io/infra
+          effect: NoSchedule
