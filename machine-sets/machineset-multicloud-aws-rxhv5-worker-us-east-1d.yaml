@@ -10,7 +10,6 @@ metadata:
   name: multicloud-aws-rxhv5-worker-us-east-1d
   uid: 37249146-7e5e-4368-b9ff-8b49038fa1af
   creationTimestamp: '2023-01-24T18:29:51Z'
-  generation: 5
   managedFields:
     - apiVersion: machine.openshift.io/v1beta1
       fieldsType: FieldsV1
@@ -40,9 +39,7 @@ metadata:
                 .: {}
                 'f:value':
                   'f:instanceType': {}
-                  'f:metadata':
-                    .: {}
-                    'f:creationTimestamp': {}
+                  'f:metadata': {}
                   'f:blockDevices': {}
                   'f:kind': {}
                   'f:securityGroups': {}
