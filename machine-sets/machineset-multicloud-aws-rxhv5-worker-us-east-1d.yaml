@@ -2,7 +2,7 @@ apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 ignoreDifferences:
   jsonPointers:
-  - /managedFields
+  - /spec/replicas
 # - group: apps
 #     jsonPointers:
 #     - /spec/replicas
